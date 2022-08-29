@@ -1,2 +1,1 @@
-# Unity-peli
-Kurssin peli
+# Unity-project
