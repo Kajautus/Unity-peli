@@ -9,6 +9,10 @@ TagManager:
   - Pressure
   - JumpPad
   - Ground
+  - Speed
+  - Slow
+  - Wonky
+  - unWonky
   layers:
   - Default
   - TransparentFX
