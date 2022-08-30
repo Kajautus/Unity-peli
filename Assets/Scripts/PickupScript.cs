@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PickupScript : MonoBehaviour
 {
+    public ObjectRendere meshRend;
     [SerializeField] private LayerMask PickupMask;
     [SerializeField] private Camera PlayerCam;
     [SerializeField] private Transform PickupTarget;
@@ -11,10 +12,13 @@ public class PickupScript : MonoBehaviour
     [SerializeField] private float PickupRange;
     private Rigidbody CurrentObject;
 
+    
+    
+    
 
-    void Start()
+    void Awake()
     {
-
+        meshRend = GameObject.Find("FadeManager").GetComponent<ObjectRendere>();
     }
     void Update()
     {
@@ -23,7 +27,12 @@ public class PickupScript : MonoBehaviour
             if (CurrentObject)
             {
                 CurrentObject.useGravity = true;
+                
                 CurrentObject = null;
+                foreach (var renderer in meshRend.opaqueRenderers)
+                {
+                    renderer.enabled = enabled;
+                }
                 return;
             }
 
@@ -32,8 +41,23 @@ public class PickupScript : MonoBehaviour
             {
                 CurrentObject = HitInfo.rigidbody;
                 CurrentObject.useGravity = false;
+                foreach(var renderer in meshRend.opaqueRenderers)
+                {   
+                    if (CurrentObject.useGravity == false)
+                    {
+                        renderer.enabled = false;
+                    }
+                   
+                    
+                }
+
             }
+           
+
+
         }
+        
+        
     }
 
     void FixedUpdate()
@@ -42,7 +66,7 @@ public class PickupScript : MonoBehaviour
         {
             Vector3 DirectionToPoint = PickupTarget.position - CurrentObject.position;
             float DistanceToPoint = DirectionToPoint.magnitude;
-
+            
             CurrentObject.velocity = DirectionToPoint * 12f * DistanceToPoint;
         }
     }
