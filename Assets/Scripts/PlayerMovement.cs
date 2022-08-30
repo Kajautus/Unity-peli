@@ -93,7 +93,15 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
     }
-
+    //Changing the gravity upside down if Player hits a triggerpoint
+    private void OnTriggerStay(Collider collision)
+    {
+        if (collision.gameObject.tag == "GravitySwitch")
+        {
+            gravity = 20f;
+        }
+       
+    }
     //Stops footstepsSound when player is colliding with ladders
     void OnTriggerEnter(Collider collision)
     {
