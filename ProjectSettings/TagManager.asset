@@ -9,6 +9,7 @@ TagManager:
   - Pressure
   - JumpPad
   - Ground
+  - Pickable
   layers:
   - Default
   - TransparentFX
