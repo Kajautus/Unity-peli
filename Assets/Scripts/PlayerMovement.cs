@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource footstepsSound;
     public AudioSource sprintSound;
     public AudioSource jumpSound;
+    public bool wonkiness = false;
 
     Vector3 velocity;
     bool isGrounded;
@@ -88,8 +89,35 @@ public class PlayerMovement : MonoBehaviour
                 //Debug.Log("BOUNCE!");
                 jumpHeight = 3f;
                 break;
+            case "Speed":
+                speed = 12f*2;
+                sprintSpeed = 1f*2;
+                wonkiness = false;
+                break;
+            case "Slow":
+                speed = 12f / 2;
+                sprintSpeed = 1f / 2;
+                wonkiness = false;
+                break;
+            case "Wonky":
+                wonkiness = true;
+                speed = (12f *-1);
+                sprintSpeed = (1f *-1);
+                break;
+            case "unWonky":
+                speed = 12f;
+                sprintSpeed = 1f;
+                wonkiness = false;
+                break;
             case "Ground":
+                if (wonkiness == false)
+                {
                 jumpHeight = 3f;
+                speed = 12f;
+                sprintSpeed = 1f;
+                gravity = -9.81f;
+                jumpHeight = 3f;
+                }
                 break;
         }
     }
