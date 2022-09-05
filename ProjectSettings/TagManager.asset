@@ -9,12 +9,16 @@ TagManager:
   - Pressure
   - JumpPad
   - Ground
-  - GravitySwitch
+  - Pickable
+  - Selectable
+  - Enemy
+  - Interact
+  - Weapon
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Usable
   - Water
   - UI
   - Ground
