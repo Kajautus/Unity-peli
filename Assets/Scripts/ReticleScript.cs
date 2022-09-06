@@ -24,7 +24,7 @@ public class ReticleScript : MonoBehaviour
         }
         else
         {
-            reticle.color = new Color(1, 1, 1, 1f);
+            reticle.color = new Color(1, 1, 1, 0.75f);
         }
     }
 }

@@ -14,6 +14,7 @@ TagManager:
   - Enemy
   - Interact
   - Weapon
+  - main
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - Ladder
   - Pickable
   - Postprocessing
-  - 
-  - 
+  - Interact
+  - Player
   - 
   - 
   - 
