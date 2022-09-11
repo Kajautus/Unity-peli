@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GunController : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GunController : MonoBehaviour
     [SerializeField] string triggerName;
 
     [SerializeField] ParticleSystem muzzleFlash;
+    
+    [SerializeField] private Image reticle;
 
     public float Damage = 10f;
     public float range = 100f;
@@ -16,7 +19,10 @@ public class GunController : MonoBehaviour
     public float impactForce = 30;
     public Camera playerCam;
     
-
+    private void Start()
+    {
+        
+    }
 
     public void SetTrigger()
     {
