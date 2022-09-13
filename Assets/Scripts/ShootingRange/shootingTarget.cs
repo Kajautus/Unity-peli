@@ -9,16 +9,11 @@ public class shootingTarget : MonoBehaviour
     public AudioClip destroySound;
     
 
-    private void Start()
-    {
-        
-        
-    }
     public void TakeDamage (float amount)
     {
         
         health -= amount;
-        if (health == 0f)
+        if (health <= 0f)
         {
             
             Die();

@@ -29,6 +29,8 @@ public class ReticleScript : MonoBehaviour
 
         }
         
+
+
         if (Physics.Raycast(transform.position, transform.forward, out hit, pickUpRange))
         {
             if (hit.transform.gameObject.CompareTag("Interact"))
@@ -41,6 +43,6 @@ public class ReticleScript : MonoBehaviour
             }
         }
         
-      
+
     }
 }

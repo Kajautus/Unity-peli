@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PickupScript : MonoBehaviour
 {
 
-    public ObjectRendere opaqueRend;
+    private ObjectRendere opaqueRend;
     [SerializeField] public LayerMask PickupMask;
     [SerializeField] public Camera PlayerCam;
     [SerializeField] private Transform PickupTarget;
@@ -17,7 +17,7 @@ public class PickupScript : MonoBehaviour
     [SerializeField] public float PickupRange;
     private Rigidbody CurrentObject;
 
-
+   
     
     
 
@@ -25,8 +25,7 @@ public class PickupScript : MonoBehaviour
     {
         opaqueRend = GameObject.Find("FadeManager").GetComponent<ObjectRendere>();
         
-       
-        
+
     }
     void Update()
     {
