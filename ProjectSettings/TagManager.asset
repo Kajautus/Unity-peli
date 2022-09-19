@@ -9,19 +9,25 @@ TagManager:
   - Pressure
   - JumpPad
   - Ground
+  - Pickable
+  - Selectable
+  - Enemy
+  - Interact
+  - Weapon
+  - main
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Usable
   - Water
   - UI
   - Ground
   - Ladder
   - Pickable
   - Postprocessing
-  - 
-  - 
+  - Interact
+  - Player
   - 
   - 
   - 

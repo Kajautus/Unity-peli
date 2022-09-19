@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: ae17a56ba8fdd9a46b808e16e0702434
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerCameraTransform: {instanceID: 0}
+  - pickUpUI: {instanceID: 0}
+  - pickUpParent: {instanceID: 0}
+  - inHandItem: {instanceID: 0}
+  - interactionInput: {instanceID: 0}
+  - dropInput: {instanceID: 0}
+  - useInput: {instanceID: 0}
+  - pickUpSource: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -2,13 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class levelMusic : MonoBehaviour
+public class LevelMusic : MonoBehaviour
 {
-    public AudioSource music;
+    public AudioSource levelmusic;
 
     // Update is called once per frame
-    void Update()
+    
+
+    public void ChangeMusic(AudioClip music)
     {
-        music.Play();
+        if (levelmusic.clip.name == music.name)
+            return;
+        levelmusic.Stop();
+        levelmusic.clip = music;
+        levelmusic.Play();
     }
 }
