@@ -13,10 +13,12 @@ public class RayCastButtonPress : MonoBehaviour
     private ButtonDoorController2 raycastedObj;
 
     private KeyCode openDoorKey = KeyCode.E;
-
+    public AudioClip buttonSound;
     
     private bool isCrosshairActive;
     private bool doOnce;
+
+    
 
     private const string interactableTag = "Interact";
 
@@ -47,6 +49,8 @@ public class RayCastButtonPress : MonoBehaviour
 
                 if (Input.GetKeyDown(openDoorKey))
                 {
+                    
+                    AudioSource.PlayClipAtPoint(buttonSound, transform.position, 0.2f);
                     raycastedObj.PlayAnimation();
                 }
             }
