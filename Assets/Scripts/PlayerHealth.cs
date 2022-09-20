@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,7 +16,8 @@ public class PlayerHealth : MonoBehaviour
     public AudioClip healthSound;
     public AudioClip armorSound;
 
-    public AudioSource hurtSound;
+    public AudioSource randomSound;
+    public AudioClip[] hurtSounds;
     void Start()
     {
         health = maxHealth;
@@ -41,7 +43,8 @@ public class PlayerHealth : MonoBehaviour
         {
             if(armor >= damage)
             {
-                hurtSound.Play();
+                randomSound.clip = hurtSounds[Random.Range(0, hurtSounds.Length)];
+                randomSound.Play();
                 armor -= damage;
             }
             else if(armor < damage)
@@ -57,7 +60,8 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            hurtSound.Play();
+            randomSound.clip = hurtSounds[Random.Range(0, hurtSounds.Length)];
+            randomSound.Play();
             health -= damage;
         }
 
