@@ -35,7 +35,8 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
+        Vector3 moveA = transform.right * x + transform.forward * z;
+        Vector3 move = moveA.normalized;
 
         controller.Move(move * speed * Time.deltaTime);
 
@@ -49,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
                 footstepsSound.enabled = false;
                 sprintSound.enabled = true;
                 controller.Move(move * (speed + sprintSpeed )* Time.deltaTime);
+
 
 
 

@@ -9,7 +9,7 @@ public class DoorController : MonoBehaviour
     public bool requiresKey;
 
     public bool reqRed, reqBlue, reqGreen;
-
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("FPS_Player"))
@@ -20,9 +20,12 @@ public class DoorController : MonoBehaviour
                 {
                     doorAnimation.SetBool("isOpening", true);
                 }
+             
                 if (reqBlue && other.GetComponent<PlayerInventory>().hasBlue)
                 {
+                    
                     doorAnimation.SetBool("isOpening", true);
+                    
                 }
                 if (reqGreen && other.GetComponent<PlayerInventory>().hasGreen)
                 {
@@ -44,12 +47,14 @@ public class DoorController : MonoBehaviour
         {
             doorAnimation.SetBool("isOpening", false);
         }
-            
+
+        
     }
     // Start is called before the first frame update
     void Start()
     {
         doorAnimation = this.transform.parent.GetComponent<Animator>();
+        
     }
 
     private void Update()
