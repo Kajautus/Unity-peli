@@ -9,11 +9,13 @@ public class ButtonDoorController2 : MonoBehaviour
     private bool doorOpen = false;
 
     public string openAnimationName = "Opening";
-    public string closeAnimationName = "Opening";
+    public string closeAnimationName = "Closing";
 
     public int waitTimer = 1;
     private bool pauseInteraction = false;
 
+    public MeshRenderer buttonColorON;
+    public MeshRenderer buttonColorOFF;
     private IEnumerator PauseDoorInteraction()
     {
         pauseInteraction = true;
@@ -25,12 +27,17 @@ public class ButtonDoorController2 : MonoBehaviour
     {
         if(!doorOpen && !pauseInteraction)
         {
+
+            buttonColorON.enabled = false;
+            buttonColorOFF.enabled = true;
             doorAnim.Play(openAnimationName, 0, 0.0f);
             doorOpen = true;
             StartCoroutine(PauseDoorInteraction());
         }
         else if (doorOpen && !pauseInteraction)
         {
+            buttonColorON.enabled = true;
+            buttonColorOFF.enabled = false;
             doorAnim.Play(closeAnimationName, 0, 0.0f);
             doorOpen = false;
             StartCoroutine(PauseDoorInteraction());
