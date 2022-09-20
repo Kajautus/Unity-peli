@@ -725,6 +725,7 @@ MonoBehaviour:
     m_Bits: 1024
   excludeLayerName: 
   instruction: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1390158387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,8 +787,8 @@ GameObject:
   - component: {fileID: 164490491}
   - component: {fileID: 164490493}
   - component: {fileID: 164490499}
-  - component: {fileID: 6013310612753750651}
   - component: {fileID: 572943095}
+  - component: {fileID: 2423151154421393520}
   m_Layer: 11
   m_Name: FPS_Player
   m_TagString: FPS_Player
@@ -880,7 +881,7 @@ MonoBehaviour:
   chController: {fileID: 2247090973521563809}
   speedUpDown: -50
   FPSInput: {fileID: 2247090973521563811}
-  ladderSound: {fileID: 366085500259552621, guid: 05b806c739e7a854fa4c7e66dc03d5c3, type: 3}
+  ladderSound: {fileID: 0}
 --- !u!114 &2247090973521563815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1030,20 +1031,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!136 &6013310612753750651
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2247090973521563836}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.66718316
-  m_Height: 2.4332597
-  m_Direction: 1
-  m_Center: {x: 0.106160715, y: -0.13651788, z: 0.0000000024401627}
 --- !u!114 &572943095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,6 +1048,21 @@ MonoBehaviour:
   healthSound: {fileID: 8300000, guid: 70ed2aaac0b81414b8a308a6ca869f61, type: 3}
   armorSound: {fileID: 8300000, guid: 958408b32ccf3714ea02821877b0870c, type: 3}
   hurtSound: {fileID: 359494299}
+--- !u!114 &2423151154421393520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2247090973521563836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56fc28265d134e449a5e488937fa31f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasRed: 0
+  hasGreen: 0
+  hasBlue: 0
 --- !u!1 &2247090974745202695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,7 +1074,7 @@ GameObject:
   - component: {fileID: 2247090974745202694}
   m_Layer: 0
   m_Name: GroundCheck
-  m_TagString: Pressure
+  m_TagString: FPS_Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
