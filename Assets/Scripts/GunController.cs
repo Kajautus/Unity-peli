@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class GunController : MonoBehaviour
     [SerializeField] private Image reticle;
 
     public AudioSource shootSound;
+    public AudioSource emptySound;
     public AudioClip ammoPickup;
 
     public float Damage = 10f;
@@ -44,8 +46,15 @@ public class GunController : MonoBehaviour
             muzzleFlash.Play();
             gunAnim.SetTrigger(triggerName);
 
+           
+
         }
-        
+        if (Input.GetMouseButtonDown(0) && Time.time > nextTimeToFire && ammo == 0)
+        {
+            emptySound.Play();
+        }
+
+
     }
 
     public void GiveAmmo(int amount, GameObject pickup)
@@ -63,6 +72,8 @@ public class GunController : MonoBehaviour
         CanvasManager.Instance.UpdateAmmo(ammo);
 
     }
+
+    
     void shoot()    
     {
         RaycastHit hit;
