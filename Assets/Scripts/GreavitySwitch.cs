@@ -5,16 +5,17 @@ using UnityEngine;
 public class GreavitySwitch : MonoBehaviour
 {
     private CharacterController cc;
+    public Transform playerCam;
     void Start()
     {
         cc = GetComponent<CharacterController>();
     }
 
-    private void OnTriggerEnter(Collider collision)
+    public void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "GravitySwitch")
         {
-            
+            playerCam.rotation = Quaternion.Euler(0, 0, 180f);
         }
     }
     void Update()

@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     public InputAction playerControls;
+    public Transform PlayerCam;
 
     public float speed = 12f;
     public float sprintSpeed = 1f;
@@ -103,6 +104,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "GravitySwitch")
         {
             gravity = 20f;
+            PlayerCam.rotation = Quaternion.Euler(0, 0, 180f);
         }
        
     }
