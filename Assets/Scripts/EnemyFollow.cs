@@ -15,10 +15,9 @@ public class EnemyFollow : MonoBehaviour
     public AudioSource damageSound;
 
     //Patrolling
-    public Vector3 walkPoint;
-    bool walkPointSet;
-    public float walkPointRange;
-
+    public Transform[] waypoints;
+    int WaypointIndex;
+    Vector3 target;
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
@@ -32,33 +31,23 @@ public class EnemyFollow : MonoBehaviour
     {
         Player = GameObject.Find("FPS_Player").transform;
         enemy = GetComponent<NavMeshAgent>();
+        UpdateDestination();
     }
 
-    private void Patrolling()
+    void UpdateDestination()
     {
-        if (!walkPointSet) SearchWalkPoint();
-
-        if (walkPointSet)
-            enemy.SetDestination(walkPoint);
-
-        Vector3 distanceToWalkPoint = Player.transform.position - walkPoint;
-
-        //Walkpoint reached
-        if (distanceToWalkPoint.magnitude < 1f)
-            walkPointSet = false;
+        target = waypoints[WaypointIndex].position;
+        enemy.SetDestination(target);
     }
-
-    private void SearchWalkPoint()
+    void IterateWaypointIndex()
     {
-        //Calculate random point in range
-        float randomZ = Random.Range(-walkPointRange, walkPointRange);
-        float randomX = Random.Range(-walkPointRange, walkPointRange);
-
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
-
-        if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
-            walkPointSet = true;
+        WaypointIndex++;
+        if (WaypointIndex >= waypoints.Length)
+        {
+            WaypointIndex = 0;
+        }
     }
+   
 
     private void ChasePlayer ()
     {
@@ -106,13 +95,20 @@ public class EnemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Vector3.Distance(transform.position, target) < 5)
+        {
+            IterateWaypointIndex();
+            UpdateDestination();
+        }
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
+        if (!playerInSightRange && !playerInAttackRange) UpdateDestination();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
+       
+
 
     }
     private void OnDrawGizmosSelected()
