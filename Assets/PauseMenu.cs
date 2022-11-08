@@ -12,6 +12,8 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject volumeMenu;
 
+    public GameObject quitMenu;
+
     public AudioSource menuSound;
 
     public AudioSource selectSound;
@@ -49,8 +51,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        menuSound.Play();
         pauseMenuMusic.Stop();
         AudioListener.pause = false;
+        quitMenu.SetActive(false);
         volumeMenu.SetActive(false);
         pauseMenuUI.SetActive(false);
         controlMenu.SetActive(false);
@@ -88,6 +92,7 @@ public class PauseMenu : MonoBehaviour
         selectSound.Play();
         controlMenu.SetActive(false);
         volumeMenu.SetActive(false);
+        quitMenu.SetActive(false );
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPause = true;
@@ -106,6 +111,18 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
     }
     public void QuitGame()
+    {
+        selectSound.Play();
+        pauseMenuUI.SetActive(false);
+        quitMenu.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPause = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+    }
+
+    public void ReallyQuitGame()
     {
         selectSound.Play();
         Debug.Log("Quitting game");
