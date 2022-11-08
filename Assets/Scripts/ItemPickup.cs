@@ -38,6 +38,7 @@ public class ItemPickup : MonoBehaviour
             if (isAmmo)
             {
                 other.GetComponentInChildren<GunController>().GiveAmmo(amount, this.gameObject);
+                
             }
 
             

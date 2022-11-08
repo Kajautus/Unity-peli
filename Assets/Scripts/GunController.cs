@@ -21,6 +21,7 @@ public class GunController : MonoBehaviour
     public float Damage = 10f;
     public float range = 100f;
     public GameObject impactEffect;
+    public GameObject enemyImpact;
     public float impactForce = 30;
     public Camera playerCam;
 
@@ -105,8 +106,17 @@ public class GunController : MonoBehaviour
         ammo--;
         CanvasManager.Instance.UpdateAmmo(ammo);
 
-        GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-        Destroy(impactGO, 2f);
+        if(hit.transform.tag == "Enemy")
+        {
+            GameObject impact = Instantiate(enemyImpact, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(impact, 2f);
+        }
+        else
+        {
+            GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(impactGO, 2f);
+        }
+        
     }
 
 

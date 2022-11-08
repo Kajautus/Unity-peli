@@ -11,7 +11,7 @@ public class WeaponStandTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Weapon")
+        if(other.tag == "Weapon" && redKeyCardGlass.destroyedTargets == 15)
 
         {
             
@@ -24,7 +24,7 @@ public class WeaponStandTrigger : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
 
-        if (other.tag == "Weapon")
+        if (other.tag == "Weapon" )
         {
             
             doorAnimation.SetBool("isOpening", false);
@@ -37,8 +37,6 @@ public class WeaponStandTrigger : MonoBehaviour
         doorAnimation = this.transform.parent.GetComponent<Animator>();
     }
 
-    private void Update()
-    {
 
-    }
+    
 }
