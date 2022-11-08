@@ -16,6 +16,7 @@ public class WeaponStandTrigger : MonoBehaviour
         {
             
             doorAnimation.SetBool("isOpening", true);
+            CanvasManager.Instance.UpdateAmmo(0);
         }
         
 

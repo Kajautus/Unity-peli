@@ -60145,7 +60145,7 @@ AudioSource:
   m_GameObject: {fileID: 1458618668}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 63588898bd75bc546998591cebfbe3e3, type: 2}
   m_audioClip: {fileID: 8300000, guid: a4a52cb59b101364d83758f17d08b843, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.08
@@ -60161,7 +60161,7 @@ AudioSource:
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 1
-  BypassListenerEffects: 1
+  BypassListenerEffects: 0
   BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
@@ -80815,8 +80815,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1664923842, guid: 4ebc420b94c1c9f469d3c2e96b6fde3c, type: 3}
+      propertyPath: m_Volume
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664923842, guid: 4ebc420b94c1c9f469d3c2e96b6fde3c, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1454192611189718, guid: 4ebc420b94c1c9f469d3c2e96b6fde3c, type: 3}
       propertyPath: m_Name
@@ -84124,17 +84128,9 @@ PrefabInstance:
       propertyPath: destroyedTargers
       value: 
       objectReference: {fileID: 1567042220}
-    - target: {fileID: 2468566670351234453, guid: a20b3d0682192b644a2bd66900259d72, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2468566670351234454, guid: a20b3d0682192b644a2bd66900259d72, type: 3}
       propertyPath: m_Name
       value: PlayerUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 2468566670351234454, guid: a20b3d0682192b644a2bd66900259d72, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2468566670351234474, guid: a20b3d0682192b644a2bd66900259d72, type: 3}
       propertyPath: m_Pivot.x
