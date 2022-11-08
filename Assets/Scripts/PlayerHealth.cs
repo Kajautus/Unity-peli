@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -70,8 +70,11 @@ public class PlayerHealth : MonoBehaviour
             Scene currentScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(currentScene.buildIndex);
         }
-
-        CanvasManager.Instance.UpdateHealth(health);
+        if(health >= 0)
+        {
+            CanvasManager.Instance.UpdateHealth(health);
+        }
+        
         CanvasManager.Instance.UpdateArmor(armor);
     }
 

@@ -16,7 +16,7 @@ public class SwitchMusicagain : MonoBehaviour
 
     private void Update()
     {
-        if(CubePrison.destroyedTargets == 15)
+        if(redKeyCardGlass.destroyedTargets == 15)
         {
             if (oldTrack != null)
             {

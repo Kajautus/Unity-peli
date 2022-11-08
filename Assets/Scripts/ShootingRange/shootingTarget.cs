@@ -9,8 +9,10 @@ public class shootingTarget : MonoBehaviour
 
     public AudioSource takeDamage;
     public AudioClip destroySound;
-    
 
+    public bool whiteRobo, greenRobo, violetRobo, whiteRobo1, greenRobo1, violetRobo1;
+    
+    
     public void TakeDamage (float amount)
     {
         takeDamage.Play ();
@@ -23,14 +25,48 @@ public class shootingTarget : MonoBehaviour
 
         }
 
+        
+
         void Die()
         {
-           
-            CubePrison.destroyedTargets += 1;
+
+            redKeyCardGlass.destroyedTargets += 1;
             AudioSource.PlayClipAtPoint(destroySound, transform.position, 2f);
             Instantiate(particles, transform.position, transform.rotation);
+            if (whiteRobo)
+            {
+                robotSpawn.wRobo -= 1;
+                
+            }
+            if (greenRobo)
+            {
+                robotSpawn.gRobo -= 1;
+                
+            }
+            if (violetRobo)
+            {
+                robotSpawn.vRobo -= 1;
+                
+            }
             
+            if (whiteRobo1)
+            {
+                robotSpawn.wRobo1 -= 1;
+
+            }
+            if (greenRobo1)
+            {
+                robotSpawn.gRobo1 -= 1;
+
+            }
+            if (violetRobo1)
+            {
+                robotSpawn.vRobo1 -= 1;
+
+            }
             Destroy(gameObject);
+
+            
             
           
         }

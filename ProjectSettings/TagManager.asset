@@ -6,15 +6,15 @@ TagManager:
   tags:
   - Ladder
   - FPS_Player
-  - Pressure
   - JumpPad
   - Ground
-  - Pickable
-  - Selectable
   - Enemy
   - Interact
   - Weapon
   - main
+  - Goal
+  - Crate
+  - Throwable
   layers:
   - Default
   - TransparentFX

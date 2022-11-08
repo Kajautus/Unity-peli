@@ -33,7 +33,7 @@ public class ReticleScript : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, pickUpRange))
         {
-            if (hit.transform.gameObject.CompareTag("Interact"))
+            if (hit.transform.gameObject.CompareTag("Interact") || hit.transform.gameObject.CompareTag("Crate") || hit.transform.gameObject.CompareTag("Throwable") || hit.transform.gameObject.CompareTag("Weapon"))
             {
                 reticle.color = new Color(0, 1, 1, 0.75f);
             }
