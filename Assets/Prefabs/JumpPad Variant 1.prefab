@@ -215,7 +215,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: b46e0920d9667ca45b59dc5301c885aa, type: 3}
       propertyPath: m_Name
-      value: JumpPad
+      value: JumpPad Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b46e0920d9667ca45b59dc5301c885aa, type: 3}
       propertyPath: m_TagString
@@ -285,6 +285,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: b46e0920d9667ca45b59dc5301c885aa, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 63588898bd75bc546998591cebfbe3e3, type: 2}
     - target: {fileID: 19800000, guid: b46e0920d9667ca45b59dc5301c885aa, type: 3}
       propertyPath: LightsModule.light
       value: 
