@@ -6,12 +6,13 @@ public class ShootingRangeGlass : MonoBehaviour
 {
     public Animator doorAnimation;
 
-
+    
     void Start()
     {
         doorAnimation = this.transform.parent.GetComponent<Animator>();
     }
 
+    
 
     private void OnTriggerExit(Collider other)
     {
@@ -28,8 +29,10 @@ public class ShootingRangeGlass : MonoBehaviour
 
     private void Update()
     {
-        if(CubePrison.destroyedTargets == 15)
+        
+        if(redKeyCardGlass.destroyedTargets == 15)
         {
+           
             doorAnimation.SetBool("isOpening", false);
         }
     }

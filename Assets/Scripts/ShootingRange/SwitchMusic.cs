@@ -5,8 +5,8 @@ using UnityEngine;
 public class SwitchMusic : MonoBehaviour
 {
     public AudioClip newTrack;
-    
 
+    bool doOnce = false;
     private LevelMusic theAM;
     void Start()
     {
@@ -16,11 +16,12 @@ public class SwitchMusic : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Weapon" && CubePrison.destroyedTargets <= 15)
+        if(other.tag == "Weapon" && redKeyCardGlass.destroyedTargets <= 15 && doOnce == false)
         {
             if(newTrack != null)
             {
                 theAM.ChangeMusic(newTrack);
+                doOnce = true;
             }
             
         }

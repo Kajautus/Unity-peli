@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class PlaySound : MonoBehaviour
 {
-    public AudioSource audiosource;
-    void Start()
-    {
-        audiosource = GetComponent<AudioSource>();
-    }
+    public AudioSource jumpaPadSound;
+   
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "FPS_Player")
+        if(collision.gameObject.tag == "FPS_Player")
         {
-            audiosource.Play();
+            jumpaPadSound.Play();
         }
+        
+            
 
+
+        
     }
 
 }

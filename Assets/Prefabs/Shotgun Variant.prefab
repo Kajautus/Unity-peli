@@ -5202,10 +5202,12 @@ MonoBehaviour:
   muzzleFlash: {fileID: 5570222643769178664}
   reticle: {fileID: 0}
   shootSound: {fileID: 6016218166116324440}
+  emptySound: {fileID: 0}
   ammoPickup: {fileID: 8300000, guid: 42d3519384a91a149b82c5996ddaa939, type: 3}
   Damage: 50
   range: 80
   impactEffect: {fileID: 1000012142692022, guid: a475880e7da0e9548aa05cb7933752cd, type: 3}
+  enemyImpact: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
   impactForce: 30
   playerCam: {fileID: 0}
   maxAmmo: 100
