@@ -30,7 +30,7 @@ public class EnemyTarget : MonoBehaviour
             Instantiate(particles, transform.position, transform.rotation);
 
             Destroy(gameObject);
-
+            EnemySpawn.robo -= 1;
 
         }
     }

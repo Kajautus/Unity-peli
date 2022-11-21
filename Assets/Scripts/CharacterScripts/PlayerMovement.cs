@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     public InputAction playerControls;
+    public Transform PlayerCam;
 
     public float speed = 12f;
     public float sprintSpeed = 1f;
@@ -99,7 +100,16 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
     }
-
+    //Changing the gravity upside down if Player hits a triggerpoint
+    private void OnTriggerStay(Collider collision)
+    {
+        if (collision.gameObject.tag == "GravitySwitch")
+        {
+            gravity = 20f;
+            PlayerCam.rotation = Quaternion.Euler(0, 0, 180f);
+        }
+       
+    }
     //Stops footstepsSound when player is colliding with ladders
     void OnTriggerEnter(Collider collision)
     {
