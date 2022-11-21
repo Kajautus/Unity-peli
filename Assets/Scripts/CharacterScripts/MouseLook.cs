@@ -1,24 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseLook : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    public  Slider mouseSensSlider;
 
+    private float mouseSensitivity;
+    
     public Transform playerBody;
 
     float xRotation = 0f;
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-
+        
+        mouseSensSlider.value = PlayerPrefs.GetFloat("mouseSensitivity");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -28,5 +33,12 @@ public class MouseLook : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
         playerBody.Rotate(Vector3.up * mouseX);
+    }
+    public void OnSliderChanged(float value)
+    {
+        
+        mouseSensitivity = value * 10;
+        PlayerPrefs.SetFloat("mouseSensitivity", value);
+        PlayerPrefs.Save();
     }
 }

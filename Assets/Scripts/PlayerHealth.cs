@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth;
-    private int health;
+    public static int health;
 
     public int maxArmor;
     private int armor;
@@ -65,11 +65,7 @@ public class PlayerHealth : MonoBehaviour
             health -= damage;
         }
 
-        if (health <= 0)
-        {
-            Scene currentScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(currentScene.buildIndex);
-        }
+        
         if(health >= 0)
         {
             CanvasManager.Instance.UpdateHealth(health);
