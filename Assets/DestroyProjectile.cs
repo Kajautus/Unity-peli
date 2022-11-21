@@ -7,11 +7,12 @@ public class DestroyProjectile : MonoBehaviour
     public GameObject projectile;
     private PlayerHealth health;
     public ParticleSystem particles;
+    public int DamageValue;
     public void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("FPS_Player"))
         {
-         collision.GetComponent<PlayerHealth>().DamagePlayer(20);
+         collision.GetComponent<PlayerHealth>().DamagePlayer(DamageValue);
             Instantiate(particles, transform.position, transform.rotation);
             Destroy(gameObject);
         }

@@ -9,6 +9,7 @@ public class EnemyTarget : MonoBehaviour
     public ParticleSystem particles;
     public AudioClip destroySound;
     public AudioClip damageSound;
+    public bool robo1, robo2, robo3;
 
     public void TakeDamage(float amount)
     {
@@ -29,9 +30,21 @@ public class EnemyTarget : MonoBehaviour
             AudioSource.PlayClipAtPoint(destroySound, transform.position, 2f);
             Instantiate(particles, transform.position, transform.rotation);
 
-            Destroy(gameObject);
-            EnemySpawn.robo -= 1;
-
+            Destroy(gameObject); 
+            if (robo1)
+            {
+                EnemySpawn.robo -= 1;
+                
+            }
+            if (robo2)
+            {
+                EnemySpawn.robo2 -= 1;
+            }
+            
+            if (robo3)
+            {
+                EnemySpawn.robo3 -= 1;
+            }
         }
     }
 
