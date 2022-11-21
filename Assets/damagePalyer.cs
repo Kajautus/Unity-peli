@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class damagePalyer : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int damage;
     void Start()
     {
         
@@ -16,11 +16,11 @@ public class damagePalyer : MonoBehaviour
         
     }
    
-    public void OnTriggerEnter(Collider other)
+    public void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("FPS_Player"))
         {
-            other.gameObject.GetComponent<PlayerHealth>().DamagePlayer(7);
+            other.gameObject.GetComponent<PlayerHealth>().DamagePlayer(damage);
         }
         
 

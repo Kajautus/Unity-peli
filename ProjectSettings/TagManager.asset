@@ -15,6 +15,7 @@ TagManager:
   - Goal
   - Crate
   - Throwable
+  - turretBullet
   layers:
   - Default
   - TransparentFX

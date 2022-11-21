@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -14,22 +15,32 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject quitMenu;
 
+    public GameObject gameOver;
+
     public AudioSource menuSound;
 
     public AudioSource selectSound;
 
     public AudioSource pauseMenuMusic;
     // Update is called once per frame
-
+    public AudioSource die;
     private void Start()
     {
+        die.ignoreListenerPause = true;
         menuSound.ignoreListenerPause = true;
         selectSound.ignoreListenerPause = true;
-        pauseMenuMusic.ignoreListenerPause = true;  
+        pauseMenuMusic.ignoreListenerPause = true;
+        Resume();
     }
     void Update()
     {
-        
+        if (PlayerHealth.health <= 0)
+        {
+            
+            gameOverScreen();
+            Invoke("DieSound", 2f);
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPause)
@@ -47,6 +58,8 @@ public class PauseMenu : MonoBehaviour
                 
             }
         }
+
+        
     }
 
     public void Resume()
@@ -100,6 +113,28 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
     }
 
+    public void gameOverScreen()
+    {
+        
+        AudioListener.pause = true;
+        gameOver.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPause = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void DieSound()
+    {
+        die.Play();
+    }
+    public void Continue()
+    {
+        die.Play();
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.buildIndex);
+
+    }
     public void VolumeAndMouse()
     {
         selectSound.Play();
@@ -122,6 +157,7 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+    
     public void ReallyQuitGame()
     {
         selectSound.Play();
