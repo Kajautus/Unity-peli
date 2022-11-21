@@ -41,10 +41,7 @@ public class scifiCrateTrigger : MonoBehaviour
         doorAnimation = this.transform.parent.GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-
-    }
+   
 
 
 }

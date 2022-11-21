@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -65,16 +65,12 @@ public class PlayerHealth : MonoBehaviour
             health -= damage;
         }
 
-        if (health <= 0)
-        {
-            Scene currentScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(currentScene.buildIndex);
-        }
-
-        if (health >= 0)
+        
+        if(health >= 0)
         {
             CanvasManager.Instance.UpdateHealth(health);
         }
+        
         CanvasManager.Instance.UpdateArmor(armor);
     }
 
