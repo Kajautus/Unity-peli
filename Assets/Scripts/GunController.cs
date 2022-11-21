@@ -26,7 +26,7 @@ public class GunController : MonoBehaviour
     public Camera playerCam;
 
     public int maxAmmo;
-    private int ammo;
+    public static int ammo;
 
 
     public float fireRate;
