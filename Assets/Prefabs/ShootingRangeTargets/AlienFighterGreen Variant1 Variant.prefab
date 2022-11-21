@@ -12,9 +12,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 942610323, guid: 278a288c464f27845b01c0877dfd2db0, type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 198000010585806678, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
+    - target: {fileID: 942610323, guid: 278a288c464f27845b01c0877dfd2db0, type: 3}
       propertyPath: greenRobo1
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 942610323, guid: 278a288c464f27845b01c0877dfd2db0, type: 3}
+      propertyPath: destroySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fd31868d68903d4f9e2c4a3b7ef98f3, type: 3}
     - target: {fileID: 5211769900787498674, guid: 278a288c464f27845b01c0877dfd2db0, type: 3}
       propertyPath: m_Name
       value: AlienFighterGreen Variant1 Variant

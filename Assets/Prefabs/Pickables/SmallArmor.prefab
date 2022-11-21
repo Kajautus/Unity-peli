@@ -289,4 +289,4 @@ MonoBehaviour:
   isHealth: 0
   isArmor: 1
   isAmmo: 0
-  amount: 5
+  amount: 15
