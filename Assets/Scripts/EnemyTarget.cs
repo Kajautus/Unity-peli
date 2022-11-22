@@ -8,13 +8,13 @@ public class EnemyTarget : MonoBehaviour
     public float health = 30f;
     public ParticleSystem particles;
     public AudioClip destroySound;
-    public AudioClip damageSound;
+    public AudioSource damageSound;
     public bool robo1, robo2, robo3;
 
     public void TakeDamage(float amount)
     {
 
-        AudioSource.PlayClipAtPoint(destroySound, transform.position, 2f);
+        damageSound.Play(); 
         health -= amount;
         if (health <= 0f)
         {

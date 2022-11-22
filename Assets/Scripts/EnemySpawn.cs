@@ -10,7 +10,7 @@ public class EnemySpawn : MonoBehaviour
     public static int robo = 1;
     public static int robo2 = 1;
     public static int robo3 = 1;
-    public static int robosDestroyed = 0;
+    public static int robosDestroyed = 8;
     public GameObject roboSpawner;
 
     void Start()
@@ -34,22 +34,22 @@ public class EnemySpawn : MonoBehaviour
         {
             Instantiate(enemyBot2);
             robo2 += 1;
-            robosDestroyed += 1;
+            robosDestroyed -= 1;
         }
         if (robo == 0)
         {
             Instantiate(enemyBot);
             robo += 1;
-            robosDestroyed += 1;
+            robosDestroyed -= 1;
         }
         if (robo3 == 0)
         {
             Instantiate(enemyBot3);
             robo3 += 1;
-            robosDestroyed += 1;
+            robosDestroyed -= 1;
         }
 
-        if (robosDestroyed == 5)
+        if (robosDestroyed < 1)
         {
             Destroy(gameObject);
         }
