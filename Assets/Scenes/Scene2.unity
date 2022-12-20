@@ -14468,8 +14468,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246231527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 1.7628855, z: 2.9273324}
-  m_LocalScale: {x: 4, y: 6, z: 3}
+  m_LocalPosition: {x: 10.08, y: -3.88, z: 2.93}
+  m_LocalScale: {x: 20, y: 20, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 636045202}
@@ -14550,7 +14550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd7b4ec72a383c4fa1258dbb9ab0cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: 
+  LevelName: Scene3
   LevelIndex: 3
 --- !u!1 &246490013
 GameObject:

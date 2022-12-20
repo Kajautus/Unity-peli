@@ -34,16 +34,18 @@ public class EnemyTarget : MonoBehaviour
             if (robo1)
             {
                 EnemySpawn.robo -= 1;
-                
+                EnemySpawn.robosDestroyed += 1;
             }
             if (robo2)
             {
                 EnemySpawn.robo2 -= 1;
+                EnemySpawn.robosDestroyed += 1;
             }
             
             if (robo3)
             {
                 EnemySpawn.robo3 -= 1;
+                EnemySpawn.robosDestroyed += 1;
             }
         }
     }

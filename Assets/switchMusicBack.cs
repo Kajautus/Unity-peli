@@ -15,7 +15,7 @@ public class switchMusicBack : MonoBehaviour
 
     private void Update()
     {
-        if (EnemySpawn.robosDestroyed < 1)
+        if (EnemySpawn.robosDestroyed >= 12)
         {
             if (oldTrack != null)
             {
