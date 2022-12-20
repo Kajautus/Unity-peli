@@ -8,6 +8,7 @@ public class ReticleScript : MonoBehaviour
     [SerializeField] private Image reticle;
     public float pickUpRange = 3f;
 
+
     private void Start()
     {
         reticle.color = new Color(1, 1, 1, 0.75f);

@@ -218,21 +218,18 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  health: 200
-  particles: {fileID: 198000010585806678, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
-  destroySound: {fileID: 8300000, guid: 1fd31868d68903d4f9e2c4a3b7ef98f3, type: 3}
-  damageSound: {fileID: 2491361799757240367}
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  timeBetweenAttacks: 0.3
+  timeBetweenAttacks: 1
   projectile: {fileID: 605707556926736577, guid: 86878efe72c401e408612c0a4c716ad6, type: 3}
-  sightRange: 17.09
-  attackRange: 11.2
+  shootSound: {fileID: 0}
+  sightRange: 30
+  attackRange: 30
   playerInSightRange: 0
-  playerInAttackRange: 0
+  playerInAttackRange: 1
 --- !u!195 &2491361799757240360
 NavMeshAgent:
   m_ObjectHideFlags: 0

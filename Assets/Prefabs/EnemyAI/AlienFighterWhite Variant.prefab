@@ -448,13 +448,13 @@ MonoBehaviour:
   - {fileID: 4875844954263381030, guid: 42524e1932a0b1d4385708646638a7e3, type: 3}
   - {fileID: 6910897646773583447, guid: 829d65ead8f692e428b3f6da3dfa966e, type: 3}
   - {fileID: 8908279926993526987, guid: 31ddcb8317fda9a4e8b8cbddee95f78e, type: 3}
-  timeBetweenAttacks: 0.3
+  timeBetweenAttacks: 1
   projectile: {fileID: 605707556926736577, guid: 86878efe72c401e408612c0a4c716ad6, type: 3}
   shootSound: {fileID: 2903820101221554267}
-  sightRange: 10
-  attackRange: 11.2
-  playerInSightRange: 1
-  playerInAttackRange: 0
+  sightRange: 30
+  attackRange: 30
+  playerInSightRange: 0
+  playerInAttackRange: 1
 --- !u!195 &8986787137698876839
 NavMeshAgent:
   m_ObjectHideFlags: 0
