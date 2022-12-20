@@ -16,8 +16,8 @@ public class EnemySpawn : MonoBehaviour
     void Start()
     {
         Instantiate(enemyBot);
-        Invoke("Spawnrobo2", 10f);
-        Invoke("Spawnrobo3", 20f);
+        Invoke("Spawnrobo2", 5f);
+        Invoke("Spawnrobo3", 10f);
     }
 
     void Spawnrobo2 ()
@@ -30,28 +30,27 @@ public class EnemySpawn : MonoBehaviour
     }
     void Update()
     {
-        if (robo2 == 0)
+        if (robosDestroyed < 10)
         {
-            Instantiate(enemyBot2);
-            robo2 += 1;
-            robosDestroyed += 1;
-        }
-        if (robo == 0)
-        {
-            Instantiate(enemyBot);
-            robo += 1;
-            robosDestroyed += 1;
-        }
-        if (robo3 == 0)
-        {
-            Instantiate(enemyBot3);
-            robo3 += 1;
-            robosDestroyed += 1;
-        }
+            if (robo2 == 0)
+            {
+                Instantiate(enemyBot2);
+                robo2 += 1;
+            }
+            if (robo == 0)
+            {
+                Instantiate(enemyBot);
+                robo += 1;
+            }
+            if (robo3 == 0)
+            {
+                Instantiate(enemyBot3);
+                robo3 += 1;
+            }
 
-        if (robosDestroyed == 5)
-        {
-            Destroy(gameObject);
         }
+        
+
+     
     }
 }

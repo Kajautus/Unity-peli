@@ -6,7 +6,7 @@ public class SwitchMusic : MonoBehaviour
 {
     public AudioClip newTrack;
 
-    bool doOnce = false;
+    public bool doOnce;
     private LevelMusic theAM;
     void Start()
     {
@@ -16,12 +16,12 @@ public class SwitchMusic : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Weapon" && redKeyCardGlass.destroyedTargets <= 15 && doOnce == false)
+        if(other.tag == "Weapon" && redKeyCardGlass.destroyedTargets <= 15 && doOnce)
         {
             if(newTrack != null)
             {
                 theAM.ChangeMusic(newTrack);
-                doOnce = true;
+                doOnce = false;
             }
             
         }

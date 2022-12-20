@@ -76,8 +76,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHealth: 0
-  isHealth2: 0
+  isHealth2: 1
   isArmor: 0
   isAmmo: 0
-  isAmmo2: 1
-  amount: 30
+  isAmmo2: 0
+  amount: 50

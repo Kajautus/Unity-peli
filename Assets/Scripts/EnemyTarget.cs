@@ -8,13 +8,13 @@ public class EnemyTarget : MonoBehaviour
     public float health = 30f;
     public ParticleSystem particles;
     public AudioClip destroySound;
-    public AudioClip damageSound;
+    public AudioSource damageSound;
     public bool robo1, robo2, robo3;
 
     public void TakeDamage(float amount)
     {
 
-        AudioSource.PlayClipAtPoint(destroySound, transform.position, 2f);
+        damageSound.Play(); 
         health -= amount;
         if (health <= 0f)
         {
@@ -34,16 +34,18 @@ public class EnemyTarget : MonoBehaviour
             if (robo1)
             {
                 EnemySpawn.robo -= 1;
-                
+                EnemySpawn.robosDestroyed += 1;
             }
             if (robo2)
             {
                 EnemySpawn.robo2 -= 1;
+                EnemySpawn.robosDestroyed += 1;
             }
             
             if (robo3)
             {
                 EnemySpawn.robo3 -= 1;
+                EnemySpawn.robosDestroyed += 1;
             }
         }
     }

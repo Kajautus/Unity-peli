@@ -29255,6 +29255,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8767262264149575326, guid: 2a28baf99da65aa4c90c60e88ed4355f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 352
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767262264149575327, guid: 2a28baf99da65aa4c90c60e88ed4355f, type: 3}
+      propertyPath: m_text
+      value: SPACESTATION 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8767262264655238837, guid: 2a28baf99da65aa4c90c60e88ed4355f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -29350,6 +29358,14 @@ PrefabInstance:
     - target: {fileID: 8767262265433449596, guid: 2a28baf99da65aa4c90c60e88ed4355f, type: 3}
       propertyPath: m_Name
       value: StartMenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767262265965883581, guid: 2a28baf99da65aa4c90c60e88ed4355f, type: 3}
+      propertyPath: m_text
+      value: You are now entering Spacestation Neon, the most crueling and challenging
+        part of your journey to become a Space Marine. Your brawn, wits and combat
+        skills will be tested, and if you fail, then you will be send home in a casket!
+        If you survive, then you are ready for a real task, like figting Covenant
+        in Halo ring or Hell Demons in UAC base in Mars. Good luck!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a28baf99da65aa4c90c60e88ed4355f, type: 3}

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 7512ac6b9534eb14383124985511a047, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 950948798076af04f81233346a96c614, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 9de7c89ab4cd9ac45a56b17ca7c1ed0b, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -25670,7 +25670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959ed304922eb1648ac0fe6f21e784ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oldTrack: {fileID: 8300000, guid: a4a52cb59b101364d83758f17d08b843, type: 3}
+  oldTrack: {fileID: 8300000, guid: 2a5e15bad2a9742749b68cb704fa7ee5, type: 3}
 --- !u!1 &538272780
 GameObject:
   m_ObjectHideFlags: 0
@@ -41127,7 +41127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891535557}
   m_LocalRotation: {x: -0.081448704, y: -0, z: -0, w: 0.9966775}
-  m_LocalPosition: {x: 57.66, y: 1.646, z: 15.001}
+  m_LocalPosition: {x: 57.66, y: 2.283, z: 15.001}
   m_LocalScale: {x: 2.2257, y: 0.75989175, z: 2.2427964}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41147,6 +41147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newTrack: {fileID: 8300000, guid: 5b557a70923944bbe88e0c3f7bf6a78a, type: 3}
+  doOnce: 1
 --- !u!1 &894774820
 GameObject:
   m_ObjectHideFlags: 0
@@ -47000,8 +47001,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cube Tube
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -56341,8 +56342,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cube Tube
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -58245,7 +58246,7 @@ GameObject:
   - component: {fileID: 1458618671}
   - component: {fileID: 1458618672}
   m_Layer: 0
-  m_Name: levelMusic
+  m_Name: LevelMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58276,9 +58277,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 63588898bd75bc546998591cebfbe3e3, type: 2}
-  m_audioClip: {fileID: 8300000, guid: a4a52cb59b101364d83758f17d08b843, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2a5e15bad2a9742749b68cb704fa7ee5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.08
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -80327,11 +80328,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2247090973521563809, guid: 43c054f43bed7a44aa5738fe7f54fb2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.9
+      value: -9.6
       objectReference: {fileID: 0}
     - target: {fileID: 2247090973521563809, guid: 43c054f43bed7a44aa5738fe7f54fb2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.9
+      value: -21.4
       objectReference: {fileID: 0}
     - target: {fileID: 2247090973521563809, guid: 43c054f43bed7a44aa5738fe7f54fb2b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -80523,6 +80524,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2247090974709090621}
+    - target: {fileID: 7174163764350770643, guid: a20b3d0682192b644a2bd66900259d72, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReallyQuitGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a20b3d0682192b644a2bd66900259d72, type: 3}
 --- !u!1 &2468566671127113329 stripped

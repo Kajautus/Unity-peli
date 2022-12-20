@@ -16,7 +16,12 @@ public class DestroyProjectile : MonoBehaviour
             Instantiate(particles, transform.position, transform.rotation);
             Destroy(gameObject);
         }
-       
+
+        if (!collision.CompareTag("Enemy"))
+        {
+            Instantiate(particles, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
         
     }
     void Start()

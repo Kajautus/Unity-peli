@@ -9,10 +9,7 @@ public class EnemyFollow : MonoBehaviour
     public Transform Player;
     public LayerMask whatIsPlayer, whatIsGround;
 
-    public float health;
-    public ParticleSystem particles;
-    public AudioClip destroySound;
-    public AudioSource damageSound;
+    
 
     //Patrolling
     public Transform[] waypoints;
@@ -22,6 +19,7 @@ public class EnemyFollow : MonoBehaviour
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     public GameObject projectile;
+    public AudioSource shootSound;
 
     //States
     public float sightRange, attackRange;
@@ -63,8 +61,9 @@ public class EnemyFollow : MonoBehaviour
         
         if (!alreadyAttacked)
         {
+
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            
+            shootSound.Play();
             rb.AddForce(transform.forward * 50f, ForceMode.Impulse);
             rb.AddForce(transform.up * 4f, ForceMode.Impulse);
 
@@ -78,19 +77,7 @@ public class EnemyFollow : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDamage (int damage)
-    {
-        damageSound.Play();
-        health -= damage;
-
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 5f);
-    }
-    private void DestroyEnemy()
-    {
-        AudioSource.PlayClipAtPoint(destroySound, transform.position, 2f);
-        Instantiate(particles, transform.position, transform.rotation);
-        Destroy(gameObject);
-    }
+  
 
     // Update is called once per frame
     void Update()

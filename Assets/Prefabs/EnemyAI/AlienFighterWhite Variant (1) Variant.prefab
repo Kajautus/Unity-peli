@@ -15,21 +15,25 @@ PrefabInstance:
       propertyPath: robo3
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8669481820077207086, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8982169524419040479, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8982169524419040479, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.055405
+      value: -13.63
       objectReference: {fileID: 0}
     - target: {fileID: 8982169524419040479, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 4.31
       objectReference: {fileID: 0}
     - target: {fileID: 8982169524419040479, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29
+      value: 59.78
       objectReference: {fileID: 0}
     - target: {fileID: 8982169524419040479, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -63,5 +67,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlienFighterWhite Variant (1) Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8986787137698876832, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986787137698876832, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 75adfe9a619833445a701305b983e548, type: 3}
+    - target: {fileID: 8986787137698876832, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 63588898bd75bc546998591cebfbe3e3, type: 2}
+    - target: {fileID: 8986787137698876832, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986787137698876852, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 7982787281735408767}
+    - target: {fileID: 8986787137698876852, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+      propertyPath: sightRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986787137698876852, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+      propertyPath: attackRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986787137698876852, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+      propertyPath: playerInSightRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986787137698876852, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986787137698876852, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+      propertyPath: playerInAttackRange
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+--- !u!82 &7982787281735408767 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2903820101221554267, guid: 7afb555ae1986a44aa86b4374f448e2f, type: 3}
+  m_PrefabInstance: {fileID: 5081465846747579428}
+  m_PrefabAsset: {fileID: 0}
